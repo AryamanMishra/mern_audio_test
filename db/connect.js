@@ -3,11 +3,11 @@ import mongoose from 'mongoose'
 const connectDB = (url) => {
     mongoose.set('strictQuery', false);
     try {
-        console.log('mongo conected')
-        return mongoose.connect(url)
+        console.log('mongo connected')
+        return mongoose.connect(url) 
     }
-    catch {
-        console.log('error')
+    catch (err) {
+        console.log(err)
     }
 }
 
